@@ -4,6 +4,7 @@ BIBTEX := bibtex
 
 document:
 	$(LATEX)  $(OBJ)
+	$(BIBTEX) $(OBJ)
 	$(LATEX)  $(OBJ)
 
 # Cleanup of temporary files. Type 'make clean' to remove temporaries.

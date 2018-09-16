@@ -22,7 +22,7 @@
 \usepackage[utf8]{inputenc}
 
 % Adjust the page margins.
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.85]{geometry}
 
 % If you want to change the width of the column with the dates.
 %\setlength{\hintscolumnwidth}{3cm}
@@ -36,20 +36,23 @@
 % LinkedIn symbol.
 \usepackage{fontawesome}
 
+% For publication without bibliography
+\usepackage{bibentry}
+
 \newcommand{\linkedin}[1]{\faLinkedinSquare #1}
 
 % Command for formatting 'C++'.
 \newcommand{\Rplus}{\protect\hspace{-.1em}\protect\raisebox{.35ex}{\smaller{\smaller\textbf{+}}}}
 \newcommand{\Cpp}{\mbox{C\Rplus\Rplus}\xspace}
 
-\newcommand{\spacing}{4pt}
+\newcommand{\spacing}{2pt}
 
 % Personal data.
-\name{Ben}{Smith}
-\address{1260 Republican St, Apt 620, Seattle, WA 98109}{}{}
-\phone[mobile]{214 803 3918}
-\email{smithbr95@gmail.com}
-\extrainfo{\faLinkedinSquare \hspace{.05em} linkedin.com/in/ben-r-smith}
+\name{Andrew}{Bregger}
+\address{711 University Dr., College Station, Tx, 77840}{}{}
+\phone[mobile]{817 905 1401}
+\email{adb3649@tamu.edu}
+%\extrainfo{\faLinkedinSquare \hspace{.05em} linkedin.com/in/ben-r-smith}
 
 %\homepage{www.myname.webs.com}
 
@@ -85,15 +88,21 @@
 \addvspace{-2em}
 
 % Introductory statement.
-\small{Experienced software engineer interested in ...}
+\small{Looking to obtain software engineering internship.}
 
 \section{Education}
 
 \vspace{\spacing}
 
-\cventry{2014--2018}{Bachelor of Science in Computer Science}
+\cventry{2018--present}{Masters of Science in Computer Science}
+    {Texas A\&M University}{College Station, TX}{}
+    {Overall GPA: 3.5}
+
+\vspace{\spacing}
+
+\cventry{2013--2017}{Bachelor of Science in Computer Science}
     {Texas A\&M University}{College Station, TX}{Minor in Mathematics}
-    {University Research Scholar \\ Overall GPA: 3.38 \\ Major GPA: 3.62}
+    {University Research Scholar \\ Overall GPA: 3.14}
 
 \section{Technical Skills}
 
@@ -101,26 +110,27 @@
 
 \textbf{Programming Languages} \\
   Experienced: \Cpp, C, Python \\
-  Basic understanding: Java, Haskell, JavaScript
+  Basic understanding: Java, Haskell, Rust, Ruby, C\#
 
 \section{Experience}
 
 \vspace{\spacing}
 
 \cventry{August 2018 -- present}
-  {Sofware Development Engineer - Alexa Voice Services}{Amazon}{Seattle, WA}{}
+  {Teaching Assistant - Software Security}{Department of Computer Science}{College Station, Tx}{}
     {\vspace{3pt}
     \begin{itemize}
       \setlength{\itemindent}{1em}
-      \item My responsibilities
-      \item spanning
-      \item multiple bullets
+      \item Evaluated homeworks and projects 
+      \item Held office hours to ensure student understood course concepts
+%      \item 
+%      \item 
     \end{itemize}
     }
 
 \vspace{\spacing}
 
-\cventry{November 2015 -- December 2017}{Undergraduate Research Assistant}
+\cventry{January 2016 -- December 2017}{Undergraduate Research Assistant}
   {Texas A\&M University Department of Computer Science}
     {College Station, TX}{}{\vspace{3pt}
     \begin{itemize}
@@ -129,41 +139,36 @@
       \item Develop and maintain \Cpp motion planning library, PMPL
       \item Published undergraduate thesis on kinodynamic motion planning
       \item Coauthor on paper exploring topological Nearest-Neighbor filtering
-      \item Website: https://parasol.tamu.edu/~ben0815
     \end{itemize}
-    }
+}
 
 \vspace{\spacing}
 
-\cventry{June 2016 -- August 2016}{Information Technology Intern}
-  {Alliance Data Systems}{Plano, TX}{}{\vspace{3pt}
+\nobibliography{resume}
+%\bibliographystyle{unsrt}
+\section*{Publications}
+\begin{enumerate}
+    \item \bibentry{drrrt}
+    \item \bibentry{tbf}
+\end{enumerate}
+
+\section{Project}
+
+\cventry{}{Software Engineering Course}
+  {Course Request System}{Spring 2018}
+    {}{\vspace{3pt}
     \begin{itemize}
       \setlength{\itemindent}{1em}
-      \item Cloud computing transition project - lead security research group
-      \item Responsible for testing and reporting on various IT controls
-      \item Collaborated with the information security team on test findings
+      \item Implemented a system to allow student to request entry into courses.
+      \item Implemented database encrytion to comply with federal regulation.
     \end{itemize}
-    }
+}
 
-\section{Activities and Leadership}
-
+\section{Leadership}
 \vspace{\spacing}
 
-\addvspace{-1em}
-
-\cventry{2014 -- 2018}{{\normalfont Theta Tau professional engineering fraternity,
-Texas A\&M University}}{}{}{}{}
-
-\addvspace{-1.25em}
-
-\cventry{2016}{{\normalfont Webmaster for Theta Tau}}{}{}{}{}
-
-\addvspace{-1.25em}
-
-\cventry{2015, 2016, 2017}{{\normalfont The Big Event, Texas A\&M University
-community service event}}{}{}{}{}
-
-
+\vspace{-1em}
+\cventry{May 2013}{{\normalfont Eagle Scout}}{}{}{}{}
 
 % Reference section is commented out because I don't need it for my purposes.
 
@@ -177,23 +182,6 @@ community service event}}{}{}{}{}
 %
 %\end{itemize}
 
-% Publications from a BibTeX file without multibib for numerical labels.
-% Consider merging with preamble part.
-%\renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 
-% To redefine the heading string ("Publications"):
-%\renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}
-
-% Publications from a BibTeX file using the multibib package.
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}
 
 \end{document}
